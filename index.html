@@ -75,55 +75,71 @@
           <h2>Título</h2>
         </header>
 
-        <form>
-          <div class="form-group">
-            <label for="">Email</label>
-            <input type="email" name="" id="" class="form-control" />
+        <form id="contactForm">
+          
+          <!-- email -->
+          <div class="form-group"> 
+            <label for="correo">Email</label>
+            <input type="email" name="correo" id="correo" class="form-control" required />
           </div>
 
-          <div class="form-group">
-            <label for="">Imagen</label>
-            <input type="file" src="" alt="" />
+          <!-- imagen -->
+          <div class="form-group"> 
+            <label for="obraArte">Obra de Arte</label>
+            <input type="file" name="obraArte" id="obraArte" accept="image/*" required />
           </div>
 
-          <div class="form-group">
-            <label for="" class="form-label">Select</label>
-            <select name="" id="" class="form-control">
+          <!-- select -->
+          <div class="form-group"> 
+            <label for="tipoObra" class="form-label">Tipo de Obra</label>
+            <select name="tipoObra" id="tipoObra" class="form-control" required>
               <option value=""></option>
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
+              <option value="Dibujo">Dibujo</option>
+              <option value="Pintura">Pintura</option>
+              <option value="Grabado">Grabado</option>
+              <option value="Escultura">Escultura</option>
+              <option value="Fotografía">Fotografía</option>
             </select>
           </div>
 
-          <div class="form-group">
+          <!-- radiobutton -->
+          <div class="form-group"> 
+            <div>
+              <label>Estilo/Técnica</label>
+            </div>
+
             <div class="form-check-inline">
-              <input type="radio" name="" id="" class="form-check-input" />
-              <label for="" class="form-check-label">radiobutton</label>
+              <input type="radio" name="estiloTecnica" id="realismo" class="form-check-input" />
+              <label for="realismo" class="form-check-label">Realismo</label>
             </div>
             <div class="form-check-inline">
-              <input type="radio" name="" id="" class="form-check-input" />
-              <label for="" class="form-check-label">radiobutton</label>
+              <input type="radio" name="estiloTecnica" id="abstracto" class="form-check-input" />
+              <label for="abstracto" class="form-check-label">Abstracto</label>
             </div>
             <div class="form-check-inline">
-              <input type="radio" name="" id="" class="form-check-input" />
-              <label for="" class="form-check-label">radiobutton</label>
+              <input type="radio" name="estiloTecnica" id="surrealismo" class="form-check-input" />
+              <label for="surrealismo" class="form-check-label">Surrealismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="impresionismo" class="form-check-input" />
+              <label for="impresionismo" class="form-check-label">Impresionismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="expresionismo" class="form-check-input" />
+              <label for="expresionismo" class="form-check-label">Expresionismo</label>
             </div>
           </div>
 
+          <!-- checkbox -->
           <div class="form-group">
             <div class="form-check-inline">
-              <input type="checkbox" name="" id="" class="form-check-input" />
-              <label for="" class="form-check-label">checkbox</label>
-            </div>
-            <div class="form-check-inline">
-              <input type="checkbox" name="" id="" class="form-check-input" />
-              <label for="" class="form-check-label">checkbox</label>
+              <input type="checkbox" name="aceptoReglamento" id="aceptoReglamento" class="form-check-input" />
+              <label for="aceptoReglamento" class="form-check-label">Acepto el Reglamento</label>
             </div>
           </div>
 
           <div>
-            <input type="submit" value="Enviar" />
+            <button type="submit" id="submitInput">Enviar</button>
           </div>
         </form>
       </article>
@@ -133,6 +149,8 @@
 
   <!-- Pie de página -->
   <footer></footer>
+
+  <script src="static/js/index.js"></script>
 </body>
 
 </html>
