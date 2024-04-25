@@ -3,34 +3,57 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   // Validación del campo de correo electrónico
   const emailInput = document.getElementById('correo');
+  const invalidFeedbackEmail = document.getElementById('invalid-feedback-email');
   if (!isEmailValid(emailInput)) {
-    alert('EMAIL INCORRECTO');
+    invalidFeedbackEmail.textContent = 'Por favor ingrese un correo electrónico válido';
+  } else {
+    invalidFeedbackEmail.textContent = '';
   }
 
-  // Validación de obrea de arte (imagen)
+  // Validación de obra de arte (imagen)
   const imageInput = document.getElementById('obraArte');
+  const invalidFeedbackFile = document.getElementById('invalid-feedback-file');
   if (!isFileImage(imageInput)) {
-    alert('OBRA DE ARTE INCORRECTA');
+    invalidFeedbackFile.textContent = 'Por favor ingrese una imagen válida';
+  } else {
+    invalidFeedbackFile.textContent = '';
   }
 
   // Validación del tipo de obra (select)
   const selectInput = document.getElementById('tipoObra');
+  const invalidFeedbackSelect = document.getElementById('invalid-feedback-select');
   if (!isSelectValid(selectInput)) {
-    alert('TIPO DE OBRA INCORRECTA');
+    invalidFeedbackSelect.textContent = 'Por favor seleccione un tipo de obra válida';
+  } else {
+    invalidFeedbackSelect.textContent = '';
   }
 
   // Validación de estilo/técnica (radiobutton)
   const radiosInput = document.getElementsByName('estiloTecnica');
+  const invalidFeedbackRadio = document.getElementById('invalid-feedback-radio');
   if (!isRadioButtonValid(radiosInput)) {
-    alert('ESTILO/TÉCNICA INCORRECTO');
+    invalidFeedbackRadio.textContent = 'Por favor selecciona un estilo/técnica válido/a';
+  } else {
+    invalidFeedbackRadio.textContent = '';
   }
 
   // Validación de aceptar el reglamento (checkbox)
   const checkInput = document.getElementById('aceptoReglamento');
+  const invalidFeedbackCheck = document.getElementById('invalid-feedback-check');
   if (!isCheckboxValid(checkInput)) {
-    alert('DEBE ACEPTAR EL REGLAMENTO');
+    invalidFeedbackCheck.textContent = 'Por favor debe aceptar el reglamento';
+  } else {
+    invalidFeedbackCheck.textContent = '';
   }
+
+  // Si todos los campos son válidos, continúa con el envío del formulario
+  /* const form = document.getElementById('contactForm');
+    form.submit(); */
+
+  // Limpia todos los campos de entrada después del envío exitoso
+  cleanForm(emailInput, imageInput, selectInput, radiosInput, checkInput);
 });
+
 
 /**
  * Verifica si el valor de un campo de entrada de correo electrónico es válido.
@@ -89,4 +112,20 @@ function isRadioButtonValid(inputs) {
  */
 function isCheckboxValid(input) {
   return input.checked ? true : false;
+}
+
+/**
+ * Limpia los campos del formulario.
+ * @param {HTMLInputElement} emailInput - El campo de entrada de correo electrónico.
+ * @param {HTMLInputElement} imageInput - El campo de entrada de tipo archivo.
+ * @param {HTMLSelectElement} selectInput - El campo de selección.
+ * @param {NodeList} radiosInput - Los botones de radio del conjunto.
+ * @param {HTMLInputElement} checkInput - La casilla de verificación.
+ */
+function cleanForm(emailInput, imageInput, selectInput, radiosInput, checkInput) {
+  emailInput.value = '';
+  imageInput.value = '';
+  selectInput.value = '';
+  radiosInput.forEach(radio => radio.checked = false);
+  checkInput.checked = false;
 }

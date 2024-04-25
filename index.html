@@ -81,25 +81,31 @@
           <div class="form-group"> 
             <label for="correo">Email</label>
             <input type="email" name="correo" id="correo" class="form-control" required />
+            
+            <div id="invalid-feedback-email" class="invalid-feedback"></div>
           </div>
 
           <!-- imagen -->
           <div class="form-group"> 
             <label for="obraArte">Obra de Arte</label>
             <input type="file" name="obraArte" id="obraArte" accept="image/*" required />
+            
+            <div id="invalid-feedback-file" class="invalid-feedback"></div>
           </div>
 
           <!-- select -->
           <div class="form-group"> 
             <label for="tipoObra" class="form-label">Tipo de Obra</label>
             <select name="tipoObra" id="tipoObra" class="form-control" required>
-              <option value=""></option>
+              <option value="" selected disabled></option>
               <option value="Dibujo">Dibujo</option>
               <option value="Pintura">Pintura</option>
               <option value="Grabado">Grabado</option>
               <option value="Escultura">Escultura</option>
               <option value="Fotografía">Fotografía</option>
             </select>
+
+            <div id="invalid-feedback-select" class="invalid-feedback"></div>
           </div>
 
           <!-- radiobutton -->
@@ -128,6 +134,8 @@
               <input type="radio" name="estiloTecnica" id="expresionismo" class="form-check-input" />
               <label for="expresionismo" class="form-check-label">Expresionismo</label>
             </div>
+
+            <div id="invalid-feedback-radio" class="invalid-feedback"></div>
           </div>
 
           <!-- checkbox -->
@@ -136,6 +144,7 @@
               <input type="checkbox" name="aceptoReglamento" id="aceptoReglamento" class="form-check-input" />
               <label for="aceptoReglamento" class="form-check-label">Acepto el Reglamento</label>
             </div>
+            <div id="invalid-feedback-check" class="invalid-feedback"></div>
           </div>
 
           <div>
