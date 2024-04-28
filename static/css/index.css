@@ -53,10 +53,11 @@
   display: flex;
   align-items: start;
   justify-content: right;
+  flex-direction: column;
 }
 /*animacion de fondo responsive en s1*/
 #img-animada-contain{
-  width: 90vw;
+  width: 100vw;
   height: 75vh;
   background-image: url(../img/galeriaan1.jpg);
   background-repeat: no-repeat;
@@ -79,7 +80,123 @@
 @media only screen and (min-width: 1024px) {}
 
 /* Media query para tabletas */
-@media only screen and (max-width: 1023px) and (min-width: 768px) {}
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+ 
+  .header-contain{
+    display: flex;
+  }
+  #titulo-principal{
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: rgb(14, 14, 96);
+  }
+  #titulo-contain{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 40vw;
+    height: 15vh;
+  }
+  #logo-contain{
+    display: flex;
+    width: 15vw;
+    height: 15vh;
+  }
+  .logo{
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+  }
+  #hiperv-contain-nav{
+    display: flex;
+    width: 45vw;
+    height: 15vh;
+    justify-content: center;
+    align-items: center; 
+  }
+  .hiperv{
+    padding: 1%;
+    color: black;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #texto-s1{
+    font-size: 0.8em;
+  }
+  #s1{
+    display: flex;
+    align-items: start;
+    justify-content: right;
+    flex-direction: column;
+  }
+}
 
 /* Media query para teléfonos móviles */
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+
+  .header-contain{
+    display: flex;
+  }
+  #titulo-principal{
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: rgb(14, 14, 96);
+  }
+  #titulo-contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 12vh;
+    }
+  #logo-contain{
+    display: flex;
+    width: 15vw;
+    height: 12vh;
+  }
+  .logo{
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+  }
+  #hiperv-contain-nav{
+    display: flex;
+    width: 45vw;
+    height: 12vh;
+    justify-content: center;
+    align-items: center; 
+  }
+  .hiperv{
+    padding: 1%;
+    color: black;
+    font-size: 0.5em;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #texto-s1{
+    font-size: 0.5em;
+  }
+  #s1{
+    display: flex;
+    align-items: start;
+    justify-content: right;
+    flex-direction: column;
+  }
+  #img-animada-contain{
+    width: 100vw;
+    height: 65vh;
+    background-image: url(../img/galeriaan1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain; 
+  
+    animation-name: galeriaimgcambiar;
+    animation-duration: 20s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite; 
+  }
+}
