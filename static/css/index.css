@@ -4,6 +4,77 @@
   box-sizing: border-box;
 }
 
+/* Estilos contedores, logo , titulo, hiperv, imagenes.*/
+
+.header-contain{
+  display: flex;
+}
+#titulo-principal{
+  font-size: 2.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: rgb(14, 14, 96);
+}
+#titulo-contain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 18vh;
+}
+#logo-contain{
+  display: flex;
+  width: 15vw;
+  height: 18vh;
+}
+.logo{
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+}
+#hiperv-contain-nav{
+  display: flex;
+  width: 45vw;
+  height: 18vh;
+  justify-content: center;
+  align-items: center; 
+}
+.hiperv{
+  padding: 3%;
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Estilos de la seccion 1*/
+#s1{
+  display: flex;
+  align-items: start;
+  justify-content: right;
+}
+/*animacion de fondo responsive en s1*/
+#img-animada-contain{
+  width: 90vw;
+  height: 75vh;
+  background-image: url(../img/galeriaan1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain; 
+
+  animation-name: galeriaimgcambiar;
+  animation-duration: 20s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite; 
+}
+@keyframes galeriaimgcambiar{
+  20%{background-image: url(../img/galeriaan2.jpg)}
+  40%{background-image: url(../img/galeriaan3.jpg)}
+  60%{background-image: url(../img/galeriaan4.jpg);}
+  80%{background-image: url(../img/galeriaan5.jpg);}
+  100%{background-image: url(../img/galeriaan1.jpg);}
+}
+
 /* Media query para dispositivos de escritorio */
 @media only screen and (min-width: 1024px) {}
 
