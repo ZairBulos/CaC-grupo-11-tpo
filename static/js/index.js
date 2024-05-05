@@ -1,59 +1,161 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+/* FUNCIONES PARA VALIDAR EL ENVÍO DEL FORMULARIO */
 
-  // Validación del campo de correo electrónico
-  const emailInput = document.getElementById('correo');
-  const invalidFeedbackEmail = document.getElementById('invalid-feedback-email');
-  if (!isEmailValid(emailInput)) {
-    invalidFeedbackEmail.textContent = 'Por favor ingrese un correo electrónico válido';
-  } else {
-    invalidFeedbackEmail.textContent = '';
-  }
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  // Validación de obra de arte (imagen)
-  const imageInput = document.getElementById('obraArte');
-  const invalidFeedbackFile = document.getElementById('invalid-feedback-file');
-  if (!isFileImage(imageInput)) {
-    invalidFeedbackFile.textContent = 'Por favor ingrese una imagen válida';
-  } else {
-    invalidFeedbackFile.textContent = '';
-  }
+    // Si todos los campos son válidos, continúa con el envío del formulario
+    if (isValidForm()) {
+      //const form = document.getElementById('contactForm');
+      //form.submit();
 
-  // Validación del tipo de obra (select)
-  const selectInput = document.getElementById('tipoObra');
-  const invalidFeedbackSelect = document.getElementById('invalid-feedback-select');
-  if (!isSelectValid(selectInput)) {
-    invalidFeedbackSelect.textContent = 'Por favor seleccione un tipo de obra válida';
-  } else {
-    invalidFeedbackSelect.textContent = '';
-  }
-
-  // Validación de estilo/técnica (radiobutton)
-  const radiosInput = document.getElementsByName('estiloTecnica');
-  const invalidFeedbackRadio = document.getElementById('invalid-feedback-radio');
-  if (!isRadioButtonValid(radiosInput)) {
-    invalidFeedbackRadio.textContent = 'Por favor selecciona un estilo/técnica válido/a';
-  } else {
-    invalidFeedbackRadio.textContent = '';
-  }
-
-  // Validación de aceptar el reglamento (checkbox)
-  const checkInput = document.getElementById('aceptoReglamento');
-  const invalidFeedbackCheck = document.getElementById('invalid-feedback-check');
-  if (!isCheckboxValid(checkInput)) {
-    invalidFeedbackCheck.textContent = 'Por favor debe aceptar el reglamento';
-  } else {
-    invalidFeedbackCheck.textContent = '';
-  }
-
-  // Si todos los campos son válidos, continúa con el envío del formulario
-  /* const form = document.getElementById('contactForm');
-    form.submit(); */
-
-  // Limpia todos los campos de entrada después del envío exitoso
-  cleanForm(emailInput, imageInput, selectInput, radiosInput, checkInput);
+      cleanForm();
+    }
 });
 
+function isValidForm() {
+  return (
+    validateEmail() &&
+    validateImageInput() &&
+    validateSelect() &&
+    validateRadioButtons() &&
+    validateCheckbox()
+  );
+}
+
+/* FUNCIONES PARA VALIDAR LOS EVENTOS BLUR/CHANGE */
+
+const emailInput = document.getElementById("correo");
+emailInput.addEventListener("blur", function () {
+  validateEmail();
+});
+
+const imageInput = document.getElementById("obraArte");
+imageInput.addEventListener("change", function () {
+  validateImageInput();
+});
+
+const selectInput = document.getElementById("tipoObra");
+selectInput.addEventListener("blur", function () {
+  validateSelect();
+});
+
+const radiosInput = document.getElementsByName("estiloTecnica");
+radiosInput.forEach((radio) => {
+  radio.addEventListener("change", function () {
+    validateRadioButtons();
+  });
+});
+
+const checkInput = document.getElementById("aceptoReglamento");
+checkInput.addEventListener("change", function () {
+  validateCheckbox();
+});
+
+/* FUNCIONES DE VALIDACIÓN Y LIMPIEZA DEL FORMULARIO */
+
+/**
+ * Valida el campo de entrada de correo electrónico y muestra el mensaje de error si es necesario.
+ * @returns {boolean} Devuelve true si el correo electrónico es válido, de lo contrario, devuelve false.
+ */
+function validateEmail() {
+  const emailInput = document.getElementById("correo");
+  const invalidFeedbackEmail = document.getElementById("invalid-feedback-email");
+
+  if (!isEmailValid(emailInput)) {
+    invalidFeedbackEmail.textContent = "Por favor ingrese un correo electrónico válido";
+    return false;
+  } else {
+    invalidFeedbackEmail.textContent = "";
+    return true;
+  }
+}
+
+/**
+ * Valida el campo de entrada de imagen y muestra el mensaje de error si es necesario.
+ * @returns {boolean} Devuelve true si la imagen es válida, de lo contrario, devuelve false.
+ */
+function validateImageInput() {
+  const imageInput = document.getElementById("obraArte");
+  const invalidFeedbackFile = document.getElementById("invalid-feedback-file");
+
+  if (!isFileImage(imageInput)) {
+    invalidFeedbackFile.textContent = "Por favor ingrese una imagen válida";
+    return false;
+  } else {
+    invalidFeedbackFile.textContent = "";
+    return true;
+  }
+}
+
+/**
+ * Valida el campo de selección y muestra el mensaje de error si es necesario.
+ * @returns {boolean} Devuelve true si se ha seleccionado un tipo de obra válido, de lo contrario, devuelve false.
+ */
+function validateSelect() {
+  const selectInput = document.getElementById("tipoObra");
+  const invalidFeedbackSelect = document.getElementById("invalid-feedback-select");
+
+  if (!isSelectValid(selectInput)) {
+    invalidFeedbackSelect.textContent = "Por favor seleccione un tipo de obra válida";
+    return false;
+  } else {
+    invalidFeedbackSelect.textContent = "";
+    return true;
+  }
+}
+
+/**
+ * Valida los botones de radio y muestra el mensaje de error si es necesario.
+ * @returns {boolean} Devuelve true si se ha seleccionado un estilo/técnica válido, de lo contrario, devuelve false.
+ */
+function validateRadioButtons() {
+  const radiosInput = document.getElementsByName("estiloTecnica");
+  const invalidFeedbackRadio = document.getElementById("invalid-feedback-radio");
+
+  if (!isRadioButtonValid(radiosInput)) {
+    invalidFeedbackRadio.textContent ="Por favor selecciona un estilo/técnica válido/a";
+    return false;
+  } else {
+    invalidFeedbackRadio.textContent = "";
+    return true;
+  }
+}
+
+/**
+ * Valida la casilla de verificación y muestra el mensaje de error si es necesario.
+ * @returns {boolean} Devuelve true si la casilla de verificación está marcada, de lo contrario, devuelve false.
+ */
+function validateCheckbox() {
+  const checkInput = document.getElementById("aceptoReglamento");
+  const invalidFeedbackCheck = document.getElementById("invalid-feedback-check");
+
+  if (!isCheckboxValid(checkInput)) {
+    invalidFeedbackCheck.textContent = "Por favor debe aceptar el reglamento";
+    return false;
+  } else {
+    invalidFeedbackCheck.textContent = "";
+    return true;
+  }
+}
+
+/**
+ * Limpia los campos del formulario.
+ */
+function cleanForm() {
+  const emailInput = document.getElementById("correo");
+  const imageInput = document.getElementById("obraArte");
+  const selectInput = document.getElementById("tipoObra");
+  const radiosInput = document.getElementsByName("estiloTecnica");
+  const checkInput = document.getElementById("aceptoReglamento");
+
+  emailInput.value = "";
+  imageInput.value = "";
+  selectInput.value = "";
+  radiosInput.forEach((radio) => (radio.checked = false));
+  checkInput.checked = false;
+}
+
+/* FUNCIONES DE UTILIDAD PARA VALIDAR LOS CAMPOS DE ENTRADA */
 
 /**
  * Verifica si el valor de un campo de entrada de correo electrónico es válido.
@@ -73,7 +175,7 @@ function isEmailValid(input) {
  * @returns {boolean} - Devuelve true si el archivo seleccionado es una imagen válida, de lo contrario, devuelve false.
  */
 function isFileImage(input) {
-  const IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/bmp'];
+  const IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp", "image/bmp"];
   const image = input.files[0];
 
   return image && IMAGE_TYPES.includes(image.type);
@@ -87,7 +189,7 @@ function isFileImage(input) {
 function isSelectValid(input) {
   const select = input.value;
 
-  return select !== '';
+  return select !== "";
 }
 
 /**
@@ -111,21 +213,5 @@ function isRadioButtonValid(inputs) {
  * @returns {boolean} - Devuelve true si la casilla de verificación está marcada, de lo contrario, devuelve false.
  */
 function isCheckboxValid(input) {
-  return input.checked ? true : false;
-}
-
-/**
- * Limpia los campos del formulario.
- * @param {HTMLInputElement} emailInput - El campo de entrada de correo electrónico.
- * @param {HTMLInputElement} imageInput - El campo de entrada de tipo archivo.
- * @param {HTMLSelectElement} selectInput - El campo de selección.
- * @param {NodeList} radiosInput - Los botones de radio del conjunto.
- * @param {HTMLInputElement} checkInput - La casilla de verificación.
- */
-function cleanForm(emailInput, imageInput, selectInput, radiosInput, checkInput) {
-  emailInput.value = '';
-  imageInput.value = '';
-  selectInput.value = '';
-  radiosInput.forEach(radio => radio.checked = false);
-  checkInput.checked = false;
+  return input.checked;
 }
