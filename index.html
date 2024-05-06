@@ -97,12 +97,141 @@
     <section id="s3"></section>
 
     <!-- Sección 4 -->
-    <section id="s4"></section>
+    <section id="s4">
+
+      <!-- Información de la Galería -->
+      <article id="s4-info">
+        <header class="s4-header">
+          <h2>Título</h2>
+        </header>
+
+        <!-- Ubicación -->
+        <div id="s4-info-location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420425.4901367846!2d-58.96311932656247!3d-34.58964059999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabadf0a6829%3A0xb1d3b10b9e86cf9f!2sGaler%C3%ADa%20Rubbers!5e0!3m2!1ses-419!2sar!4v1713195007889!5m2!1ses-419!2sar"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de <Nombre de la galería> en Google Maps">
+          </iframe>
+        </div>
+
+        <!-- Horarios -->
+        <div id="s4-info-hours">
+          <dl>
+            <dt>LUNES</dt>
+            <dd>10:00 AM - 11:00 PM</dd>
+
+            <dt>MARTES</dt>
+            <dd>10:00 AM - 11:00 PM</dd>
+
+            <dt>MIÉRCOLES</dt>
+            <dd>10:00 AM - 11:00 PM</dd>
+
+            <dt>JUEVES</dt>
+            <dd>10:00 AM - 11:00 PM</dd>
+
+            <dt>VIERNES</dt>
+            <dd>10:00 AM - 11:00 PM</dd>
+
+            <dt>SÁBADO</dt>
+            <dd>10:00 AM - 11:00 PM</dd>
+
+            <dt>DOMINGO</dt>
+            <dd>10:00 AM - 11:00 PM</dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- Formulario de Contacto -->
+      <article id="s4-form">
+        <header class="s4-header">
+          <h2>Título</h2>
+        </header>
+
+        <form id="contactForm">
+          
+          <!-- email -->
+          <div class="form-group"> 
+            <label for="correo">Email</label>
+            <input type="email" name="correo" id="correo" class="form-control" required />
+            
+            <div id="invalid-feedback-email" class="invalid-feedback"></div>
+          </div>
+
+          <!-- imagen -->
+          <div class="form-group"> 
+            <label for="obraArte">Obra de Arte</label>
+            <input type="file" name="obraArte" id="obraArte" accept="image/*" required />
+            
+            <div id="invalid-feedback-file" class="invalid-feedback"></div>
+          </div>
+
+          <!-- select -->
+          <div class="form-group"> 
+            <label for="tipoObra" class="form-label">Tipo de Obra</label>
+            <select name="tipoObra" id="tipoObra" class="form-control" required>
+              <option value="" selected disabled></option>
+              <option value="Dibujo">Dibujo</option>
+              <option value="Pintura">Pintura</option>
+              <option value="Grabado">Grabado</option>
+              <option value="Escultura">Escultura</option>
+              <option value="Fotografía">Fotografía</option>
+            </select>
+
+            <div id="invalid-feedback-select" class="invalid-feedback"></div>
+          </div>
+
+          <!-- radiobutton -->
+          <div class="form-group"> 
+            <div>
+              <label>Estilo/Técnica</label>
+            </div>
+
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="realismo" class="form-check-input" />
+              <label for="realismo" class="form-check-label">Realismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="abstracto" class="form-check-input" />
+              <label for="abstracto" class="form-check-label">Abstracto</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="surrealismo" class="form-check-input" />
+              <label for="surrealismo" class="form-check-label">Surrealismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="impresionismo" class="form-check-input" />
+              <label for="impresionismo" class="form-check-label">Impresionismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="expresionismo" class="form-check-input" />
+              <label for="expresionismo" class="form-check-label">Expresionismo</label>
+            </div>
+
+            <div id="invalid-feedback-radio" class="invalid-feedback"></div>
+          </div>
+
+          <!-- checkbox -->
+          <div class="form-group">
+            <div class="form-check-inline">
+              <input type="checkbox" name="aceptoReglamento" id="aceptoReglamento" class="form-check-input" />
+              <label for="aceptoReglamento" class="form-check-label">Acepto el Reglamento</label>
+            </div>
+            <div id="invalid-feedback-check" class="invalid-feedback"></div>
+          </div>
+
+          <div>
+            <button type="submit" id="submitInput">Enviar</button>
+          </div>
+        </form>
+      </article>
+    </section>
 
   </main>
 
   <!-- Pie de página -->
   <footer></footer>
+
+  <script src="static/js/index.js"></script>
 </body>
 
 </html>
