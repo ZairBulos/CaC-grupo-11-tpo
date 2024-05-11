@@ -54,7 +54,7 @@
   justify-content: right;
   flex-direction: column;
 }
-/* estilo animacion de fondo responsive en s1*/
+/* estilo contenedeor y animacion de fondo responsive en s1*/
 #img-animada-contain{
   width: 100vw;
   height: 75vh;
@@ -83,52 +83,54 @@
 
 /* Media query para dispositivos de escritorio */
 @media only screen and (min-width: 1024px) {
-  
-.header-contain{
-  display: flex;
-}
-#titulo-principal{
-  font-size: 2.8em;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  color: rgb(14, 14, 96);
-}
-#titulo-contain{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40vw;
-  height: 18vh;
-}
-#logo-contain{
-  display: flex;
-  width: 15vw;
-  height: 18vh;
-}
-.logo{
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 80%;
-}
-#hiperv-contain-nav{
-  display: flex;
-  width: 45vw;
-  height: 18vh;
-  justify-content: center;
-  align-items: center; 
-}
-.hiperv{
-  padding: 3%;
-  color: black;
-  font-size: 1em;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+  /* Estilos contedores, logo , titulo, hiperv, imagenes.*/
+  .header-contain{
+    display: flex;
+  }
+  #titulo-principal{
+    font-size: 2.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: rgb(14, 14, 96);
+  }
+  #titulo-contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 18vh;
+  }
+  #logo-contain{
+    display: flex;
+    width: 15vw;
+    height: 18vh;
+  }
+  .logo{
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+  }
+  #hiperv-contain-nav{
+    display: flex;
+    width: 45vw;
+    height: 18vh;
+   justify-content: center;
+    align-items: center; 
+  }
+  .hiperv{
+    padding: 3%;
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 /* Media query para tabletas */
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
  
+  /* Estilos contedores, logo , titulo, hiperv, imagenes.*/
   .header-contain{
     display: flex;
   }
@@ -170,6 +172,8 @@
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  /*Estilos de la seccion 1* y parrafo */
   #texto-s1{
     font-size: 0.8em;
   }
@@ -184,6 +188,7 @@
 /* Media query para teléfonos móviles */
 @media only screen and (max-width: 767px) {
 
+  /* Estilos contedores, logo , titulo, hiperv, imagenes.*/
   .header-contain{
     display: flex;
   }
@@ -225,6 +230,7 @@
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
   }
+  /*Estilos de la seccion 1* y parrafo */
   #texto-s1{
     font-size: 0.5em;
     font-family: Arial, Helvetica, sans-serif;
@@ -235,6 +241,8 @@
     justify-content: right;
     flex-direction: column;
   }
+
+  /*estilo conteneder de imagen animada celulares */
   #img-animada-contain{
     width: 100vw;
     height: 65vh;
