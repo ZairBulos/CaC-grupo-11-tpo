@@ -138,7 +138,8 @@
 .encabezado-artista{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: start;
+  justify-items: end;
+  align-items: center;
 }
 .container-artista{
   display: grid;
