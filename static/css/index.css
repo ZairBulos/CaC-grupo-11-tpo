@@ -121,6 +121,51 @@
   border: 1px solid transparent;
   border-radius: .25rem;
 }
+/* seccion3 */
+.titulo{
+  margin: 1.5%;
+}
+.foto-artista{
+  width:70px ;
+  height: 70px;
+  border-radius: 50%;
+  padding: 8px;
+}
+.pintura-expo{
+ width: 230px;
+ height: 230px;
+  padding: 10px;
+}
+.encabezado-artista{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: end;
+  align-items: center;
+}
+.container-artista{
+  display: grid;
+  justify-content:center ;
+  justify-items: start;
+  align-items: center;
+  border: 1px solid black;
+  width: 270px;
+  height: 350px;
+  padding: 10px;
+}
+.container-artistas-destacados{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1%;
+  justify-items: center
+}
+.container-artistas-destacados > article{
+  transition: transform  .5s;
+  object-fit: cover;
+  transition-duration: .5s;
+}
+
+.container-artistas-destacados> article:hover{
+  transform:scale(1.1);} 
 
 /* Media query para dispositivos de escritorio */
 @media only screen and (min-width: 1024px) {
@@ -150,6 +195,8 @@
       }
     }
   }
+
+ 
 }
 
 /* Media query para tabletas */
@@ -183,6 +230,15 @@
       height: 25vh;
     }
   }
+/* seccion 3 */
+  .container-artistas-destacados{
+     
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    justify-items: center;
+    margin-bottom: 30px;
+          }  
 }
 
 /* Media query para teléfonos móviles */
@@ -215,5 +271,14 @@
     & iframe {
       height: 25vh;
     }
+  }
+  .container-artistas-destacados{
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+   gap: 2%;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 70px;
+  
   }
 }
