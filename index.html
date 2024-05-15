@@ -2,73 +2,63 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="static/css/index.css" />
-  
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>CaC TPO</title>
 </head>
 
 <body>
 
   <!-- Encabezado -->
-  <header class="header-contain">
-
-    <!--contenedor del logo-->
-    <div id="logo-contain">
-      <!--logo de la página--> 
-      <img class="logo" src="../static/img/imagenhead1.webp" alt="Entrada"> 
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="/static/img/logo.png" alt="cactpo.com" />
+      <span>Nombre galería</span>
     </div>
 
-    <!--contenedor del título-->
-    <div id="titulo-contain">
-      <!--título de la Página-->
-      <h1 id="titulo-principal">Galerie des vitreaux</h1>
-    </div>
-      
-    <!--contenedor del nav-->
-    <div id="nav-contain">
-          
-      <!--contenedor del menu de navegación-->
-      <nav id="hiperv-contain-nav"> 
-        <!--menu de navegación a las ultimas 3 secciones-->
-        <a class="hiperv" href="#s2">Nuestros Cuadros</a>
-        <a class="hiperv" href="#s3">Los Artistas </a>
-        <a class="hiperv" href="#s4">Exponer/Contacto</a> 
-      
-      </nav> 
-      
-    </div>
-
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#s1">Conocenos</a></li>
+        <li><a href="#s2">Cuadros</a></li>
+        <li><a href="#s3">Artistas</a></li>
+        <li><a href="#s4">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
-  
+
+  <!-- Contenido -->
   <main>
 
     <!-- Sección 1 -->
     <section id="s1">
+      <div id="img-animada-contain"></div>
 
-      <!-- Contenedor de las imagenes animadas-->
-      <div id="img-animada-contain"> 
-      </div>
-      
-      <!--contenedor de texto "invitacion", pie de imagen animada-->
-      <div>
-        <p id="texto-s1">Desde nuestra galería invitamos a toda la comunidad a conocer nuestro gran espacio de arte y dar a conocer sus obras dentro del mismo. Brindamos un ambiente cómodo, amigable y cordial para nuestros artistas y visitantes. Los esperamos. Estamos aquí: mapa.</p>
-      </div>
-      
+      <article>
+        <header>
+          <h1>Nombre galería</h1>
+        </header>
+
+        <p>
+          Desde nuestra galería invitamos a toda la comunidad a conocer nuestro gran espacio de arte y dar a conocer
+          sus obras dentro del mismo. Brindamos un ambiente cómodo, amigable y cordial para nuestros artistas y
+          visitantes. Los esperamos.
+        </p>
+      </article>
     </section>
 
     <!-- Sección 2 -->
     <section id="s2">
-      <header>
-        <h2>Titulo Sección 2</h2>
+      <header class="section-header">
+        <h2>Cuadros destacados</h2>
       </header>
 
       <div>
         <figure>
-          <img src="/static/img/gallery-picture-1.webp"
+          <img src="/static/img/gallery/gallery-picture-1.webp"
             alt="Fishing Boats with Hucksters Bargaining for Fish de Joseph Mallord William Turner"
             title="Joseph Mallord William Turner, Fishing Boats with Hucksters Bargaining for Fish" />
           <figcaption>
@@ -77,7 +67,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="static/img/gallery-picture-2.webp" alt="Love of Winter de George Wesley Bellows"
+          <img src="static/img/gallery/gallery-picture-2.webp" alt="Love of Winter de George Wesley Bellows"
             title="George Wesley Bellows, Love of Winter" />
           <figcaption>
             <span>George Wesley Bellows</span> <!-- Nombre del artista -->
@@ -85,7 +75,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="static/img/gallery-picture-3.webp" alt="Interior at Nice de Henri Matisse"
+          <img src="static/img/gallery/gallery-picture-3.webp" alt="Interior at Nice de Henri Matisse"
             title="Henri Matisse, Interior at Nice" />
           <figcaption>
             <span>Henri Matisse</span> <!-- Nombre del artista -->
@@ -93,7 +83,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="static/img/gallery-picture-4.webp" alt="Paris Street, Rainy Day de Gustave Caillebotte"
+          <img src="static/img/gallery/gallery-picture-4.webp" alt="Paris Street, Rainy Day de Gustave Caillebotte"
             title="Gustave Caillebotte; Paris Street, Rainy Day" />
           <figcaption>
             <span>Gustave Caillebotte </span> <!-- Nombre del artista -->
@@ -101,7 +91,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="static/img/gallery-picture-5.webp" alt="A Sunday on La Grande Jatte de Georges Seurat"
+          <img src="static/img/gallery/gallery-picture-5.webp" alt="A Sunday on La Grande Jatte de Georges Seurat"
             title="Georges Seurat, A Sunday on La Grande Jatte" />
           <figcaption>
             <span>Georges Seurat</span> <!-- Nombre del artista -->
@@ -109,7 +99,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="static/img/gallery-picture-6.webp" alt="Landscape with Saint John on Patmos de Nicolas Poussin"
+          <img src="static/img/gallery/gallery-picture-6.webp" alt="Landscape with Saint John on Patmos de Nicolas Poussin"
             title="Nicolas Poussin, Landscape with Saint John on Patmos" />
           <figcaption>
             <span>Nicolas Poussin</span> <!-- Nombre del artista -->
@@ -117,7 +107,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="static/img/gallery-picture-7.webp" alt="Nighthawks de Edward Hopper"
+          <img src="static/img/gallery/gallery-picture-7.webp" alt="Nighthawks de Edward Hopper"
             title="Edward Hopper, Nighthawks" />
           <figcaption>
             <span>Edward Hopper</span> <!-- Nombre del artista -->
@@ -125,7 +115,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="/static/img/gallery-picture-8.webp" alt="The Bedroom de Vincent van Gogh"
+          <img src="/static/img/gallery/gallery-picture-8.webp" alt="The Bedroom de Vincent van Gogh"
             title="Vincent van Gogh, The Bedroom" />
           <figcaption>
             <span>Vincent van Gogh</span> <!-- Nombre del artista -->
@@ -138,33 +128,36 @@
     <!-- Sección 3 -->
     <section id="s3">
 
-      <div class="titulo">
+      <header class="section-header">
         <h2>Artistas destacados</h2>
-      </div>
+      </header>
 
       <section class="container-artistas-destacados">
         <article class="container-artista">
           <div class="encabezado-artista">
             <figcaption>
-              <img
-                class="foto-artista"
-                src="static/img/imgArtista/migelangel.webp"  
-                alt=""
+              <img 
+                src="static/img/imgArtista/migelangel.webp" 
+                alt="Miguel Ángel"
+                class="foto-artista" 
+                loading="lazy" 
               /> <!--  foto de artista -->
             </figcaption>
             <div>
-              <p>Migelangel</p> <!-- nombre del artista destacado -->
+              <p>Miguel Ángel</p> <!-- nombre del artista destacado -->
               <div>
-                <p>Pintor y Escultor</p>  <!-- descripcion artista -->
+                <p>Arquitecto y Escultor</p> <!-- descripcion artista -->
               </div>
             </div>
           </div>
           <div>
             <figcaption>
-              <img
-                class="pintura-expo"
-                src="static/img/imgPinturaArtisDestacado/migelAngel1.webp"
-                alt=""
+              <img 
+                src="static/img/imgPinturaArtisDestacado/migelAngel1.webp" 
+                alt="Pintura Miguel Ángel"
+                title="Pintura de Miguel Ángel, Arquitecto y Escultor" 
+                class="pintura-expo" 
+                loading="lazy" 
               /> <!-- imagen de muestra de obra artistica-->
             </figcaption>
           </div>
@@ -173,26 +166,28 @@
         <article class="container-artista">
           <div class="encabezado-artista">
             <figcaption>
-              <img
-                class="foto-artista"
+              <img 
                 src="static/img/imgArtista/edvardMunch.webp"
-                alt=""
+                alt="Edvard Munch"
+                class="foto-artista"
+                loading="lazy" 
               /> <!--  foto de artista -->
             </figcaption>
             <div>
               <p>Edvard Munch</p> <!-- nombre del artista destacado -->
               <div>
-                <p>Pintor expresionismo</p>  <!-- descripcion artista -->
+                <p>Pintor Expresionismo</p> <!-- descripcion artista -->
               </div>
             </div>
           </div>
           <div>
             <figcaption>
-              <img
-                class="pintura-expo"
+              <img 
                 src="static/img/imgPinturaArtisDestacado/EdvarMuch.webp"
-                alt=""
-              /><!-- imagen de muestra de obra artistica-->
+                alt="Pintura Edvard Munch"
+                title="Pintura de Edvard Munch, Pintor Expresionismo"
+                class="pintura-expo" 
+              /> <!-- imagen de muestra de obra artistica-->
             </figcaption>
           </div>
         </article>
@@ -200,26 +195,28 @@
         <article class="container-artista">
           <div class="encabezado-artista">
             <figcaption>
-              <img
-                class="foto-artista"
+              <img 
                 src="static/img/imgArtista/antonioLopez1.webp"
-                alt=""
-              /><!--  foto de artista -->
+                alt="Antonio López"
+                class="foto-artista"
+                loading="lazy" 
+              /> <!--  foto de artista -->
             </figcaption>
             <div>
-              <p>Antonio Lopez</p>   <!-- nombre del artista destacado -->
+              <p>Antonio López</p> <!-- nombre del artista destacado -->
               <div>
-                <p>Pintor Hiperrealismo </p> <!-- descripcion artista -->
+                <p>Pintor Hiperrealismo</p> <!-- descripcion artista -->
               </div>
             </div>
           </div>
           <div>
             <figcaption>
-              <img
-                class="pintura-expo"
+              <img 
                 src="static/img/imgPinturaArtisDestacado/AntonioLopez.webp"
-                alt=""
-              /><!-- imagen de muestra de obra artistica-->
+                alt="Pintura Antonio López"
+                title="Pintura de Antonio López, Pintor Hiperrealismo"
+                class="pintura-expo" 
+              /> <!-- imagen de muestra de obra artistica-->
             </figcaption>
           </div>
         </article>
@@ -227,26 +224,28 @@
         <article class="container-artista">
           <div class="encabezado-artista">
             <figcaption>
-              <img
+              <img 
+                src="static/img/imgArtista/paulSignac.webp" 
+                alt="Paul Signac" 
                 class="foto-artista"
-                src="static/img/imgArtista/paulSignac.webp"
-                alt=""
-              /><!--  foto de artista -->
+                loading="lazy"
+              /> <!--  foto de artista -->
             </figcaption>
             <div>
-              <p>Paul Signac</p><!-- nombre del artista destacado -->
+              <p>Paul Signac</p> <!-- nombre del artista destacado -->
               <div>
-                <p>Pintor neoimpresionista</p> <!-- descripcion artista -->
+                <p>Pintor Neoimpresionista</p> <!-- descripcion artista -->
               </div>
             </div>
           </div>
           <div>
             <figcaption>
-              <img
-                class="pintura-expo"
+              <img 
                 src="static/img/imgPinturaArtisDestacado/pailSignac.webp"
-                alt=""
-              /><!-- imagen de muestra de obra artistica-->
+                alt="Pintura Paul Signac"
+                title="Pintura de Paul Signac, Pintor Neoimpresionista"
+                class="pintura-expo" 
+              /> <!-- imagen de muestra de obra artistica-->
             </figcaption>
           </div>
         </article>
@@ -259,8 +258,8 @@
 
       <!-- Información de la Galería -->
       <article id="s4-info">
-        <header class="s4-header">
-          <h2>Título</h2>
+        <header class="section-header">
+          <h2>Descubre dónde estamos</h2>
         </header>
 
         <!-- Ubicación -->
@@ -276,55 +275,55 @@
         <div id="s4-info-hours">
           <dl>
             <dt>LUNES</dt>
-            <dd>10:00 AM - 11:00 PM</dd>
+            <dd>CERRADO</dd>
 
             <dt>MARTES</dt>
-            <dd>10:00 AM - 11:00 PM</dd>
+            <dd>10:30 AM - 5:00 PM</dd>
 
             <dt>MIÉRCOLES</dt>
-            <dd>10:00 AM - 11:00 PM</dd>
+            <dd>10:30 AM - 9:00 PM</dd>
 
             <dt>JUEVES</dt>
-            <dd>10:00 AM - 11:00 PM</dd>
+            <dd>10:30 AM - 5:00 PM</dd>
 
             <dt>VIERNES</dt>
-            <dd>10:00 AM - 11:00 PM</dd>
+            <dd>10:30 AM - 9:00 PM</dd>
 
             <dt>SÁBADO</dt>
-            <dd>10:00 AM - 11:00 PM</dd>
+            <dd>10:30 AM - 5:30 PM</dd>
 
             <dt>DOMINGO</dt>
-            <dd>10:00 AM - 11:00 PM</dd>
+            <dd>10:30 AM - 5:30 PM</dd>
           </dl>
         </div>
       </article>
 
       <!-- Formulario de Contacto -->
       <article id="s4-form">
-        <header class="s4-header">
-          <h2>Título</h2>
+        <header class="section-header">
+          <h2>Contacto</h2>
         </header>
 
         <form id="contactForm">
-          
+
           <!-- email -->
-          <div class="form-group"> 
+          <div class="form-group">
             <label for="correo">Email</label>
             <input type="email" name="correo" id="correo" class="form-control" required />
-            
+
             <div id="invalid-feedback-email" class="invalid-feedback"></div>
           </div>
 
           <!-- imagen -->
-          <div class="form-group"> 
+          <div class="form-group">
             <label for="obraArte">Obra de Arte</label>
             <input type="file" name="obraArte" id="obraArte" accept="image/*" required />
-            
+
             <div id="invalid-feedback-file" class="invalid-feedback"></div>
           </div>
 
           <!-- select -->
-          <div class="form-group"> 
+          <div class="form-group">
             <label for="tipoObra" class="form-label">Tipo de Obra</label>
             <select name="tipoObra" id="tipoObra" class="form-control" required>
               <option value="" selected disabled></option>
@@ -339,7 +338,7 @@
           </div>
 
           <!-- radiobutton -->
-          <div class="form-group"> 
+          <div class="form-group">
             <div>
               <label>Estilo/Técnica</label>
             </div>
@@ -398,22 +397,23 @@
       </div>
 
       <article class="social"> <!-- redes sociales -->
-        <h3>siguenos</h3>
+        <h3>Redes Sociales</h3> 
         <div class="social-link">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-linkedin"></i></a>
-          <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </article>
     </section>
+
     <section class="derechos"> <!-- politicas y privacidad -->
-      <a href=""> &copy 2023 Nombre galeria </a>
-      <a href="">politicas de privacidad</a>
-      <a href="">Terminos y condiciones</a>
+      <a href="#">&copy 2024 Nombre galeria</a>
+      <a href="#">Politicas de privacidad</a>
+      <a href="#">Terminos y condiciones</a>
     </section>
   </footer>
 
+  <!-- Script JS -->
   <script src="static/js/index.js"></script>
 </body>
 
