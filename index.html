@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Galería Virtual de Arte es una plataforma online diseñada para brindar a los usuarios una experiencia inmersiva en el mundo del arte." />
+  <meta name="keywords" content="Arte, Galería, Exposición, Pinturas, Codo a Codo, Desarrollo Web, Front-end, HTML, CSS, JavaScript" />
+  <link rel="stylesheet" href="static/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon-16.ico" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon-32.ico" sizes="32x32" />
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon-96.ico" sizes="96x96" />
+  <title>Galería Codo a Codo</title>
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo-container">
+        <img src="/static/img/logo.png" alt="galeriacodoacodo.com" />
+        <span>Galería Codo a Codo</span>
+      </div>
+  
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#s1">Conocenos</a></li>
+          <li><a href="#s2">Cuadros</a></li>
+          <li><a href="#s3">Artistas</a></li>
+          <li><a href="#s4">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main class="container">
+
+    <!-- Sección 1 -->
+    <section id="s1">
+      <div id="img-animada-contain"></div>
+
+      <article>
+        <header>
+          <h1>Galería Codo a Codo</h1>
+        </header>
+
+        <p>
+          Desde nuestra galería invitamos a toda la comunidad a conocer nuestro gran espacio de arte y dar a conocer
+          sus obras dentro del mismo. Brindamos un ambiente cómodo, amigable y cordial para nuestros artistas y
+          visitantes. Los esperamos.
+        </p>
+      </article>
+    </section>
+
+    <!-- Sección 2 -->
+    <section id="s2">
+      <header class="section-header">
+        <h2>Cuadros destacados</h2>
+      </header>
+
+      <div>
+        <figure>
+          <img src="/static/img/gallery/gallery-picture-1.webp"
+            alt="Fishing Boats with Hucksters Bargaining for Fish de Joseph Mallord William Turner"
+            title="Joseph Mallord William Turner, Fishing Boats with Hucksters Bargaining for Fish" />
+          <figcaption>
+            <span>Joseph Mallord William Turner</span> <!-- Nombre del artista -->
+            <h3>Fishing Boats with Hucksters Bargaining for Fish</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="static/img/gallery/gallery-picture-2.webp" alt="Love of Winter de George Wesley Bellows"
+            title="George Wesley Bellows, Love of Winter" />
+          <figcaption>
+            <span>George Wesley Bellows</span> <!-- Nombre del artista -->
+            <h3>Love of Winter</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="static/img/gallery/gallery-picture-3.webp" alt="Interior at Nice de Henri Matisse"
+            title="Henri Matisse, Interior at Nice" />
+          <figcaption>
+            <span>Henri Matisse</span> <!-- Nombre del artista -->
+            <h3>Interior at Nice</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="static/img/gallery/gallery-picture-4.webp" alt="Paris Street, Rainy Day de Gustave Caillebotte"
+            title="Gustave Caillebotte; Paris Street, Rainy Day" />
+          <figcaption>
+            <span>Gustave Caillebotte </span> <!-- Nombre del artista -->
+            <h3>Paris Street, Rainy Day</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="static/img/gallery/gallery-picture-5.webp" alt="A Sunday on La Grande Jatte de Georges Seurat"
+            title="Georges Seurat, A Sunday on La Grande Jatte" />
+          <figcaption>
+            <span>Georges Seurat</span> <!-- Nombre del artista -->
+            <h3>A Sunday on La Grande Jatte</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+        <figure>
+          <img 
+            src="static/img/gallery/gallery-picture-6.webp"
+            alt="Landscape with Saint John on Patmos de Nicolas Poussin"
+            title="Nicolas Poussin, Landscape with Saint John on Patmos"
+          />
+          <figcaption>
+            <span>Nicolas Poussin</span> <!-- Nombre del artista -->
+            <h3>Landscape with Saint John on Patmos</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="static/img/gallery/gallery-picture-7.webp" alt="Nighthawks de Edward Hopper"
+            title="Edward Hopper, Nighthawks" />
+          <figcaption>
+            <span>Edward Hopper</span> <!-- Nombre del artista -->
+            <h3>Nighthawks</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="/static/img/gallery/gallery-picture-8.webp" alt="The Bedroom de Vincent van Gogh"
+            title="Vincent van Gogh, The Bedroom" />
+          <figcaption>
+            <span>Vincent van Gogh</span> <!-- Nombre del artista -->
+            <h3>The Bedroom</h3> <!-- Nombre del cuadro -->
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sección 3 -->
+    <section id="s3">
+
+      <header class="section-header">
+        <h2>Artistas destacados</h2>
+      </header>
+
+      <section class="container-artistas-destacados">
+        <article class="container-artista">
+          <div class="encabezado-artista">
+            <img 
+              src="static/img/imgArtista/migelangel.webp"
+              alt="Miguel Ángel"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
+            <div>
+              <p>Miguel Ángel</p> <!-- nombre del artista destacado -->
+              <p>Arquitecto y Escultor</p> <!-- descripcion artista -->
+            </div>
+          </div>
+          <div>
+            <img 
+              src="static/img/imgPinturaArtisDestacado/migelAngel1.webp"
+              alt="Pintura Miguel Ángel"
+              title="Pintura de Miguel Ángel, Arquitecto y Escultor"
+              class="pintura-expo"
+              loading="lazy"
+            /> <!-- imagen de muestra de obra artistica-->
+          </div>
+        </article>
+
+        <article class="container-artista">
+          <div class="encabezado-artista">
+            <img 
+              src="static/img/imgArtista/edvardMunch.webp"
+              alt="Edvard Munch"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
+            <div>
+              <p>Edvard Munch</p> <!-- nombre del artista destacado -->
+              <p>Pintor Expresionismo</p> <!-- descripcion artista -->
+            </div>
+          </div>
+          <div>
+            <img 
+              src="static/img/imgPinturaArtisDestacado/EdvarMuch.webp"
+              alt="Pintura Edvard Munch"
+              title="Pintura de Edvard Munch, Pintor Expresionismo"
+              class="pintura-expo"
+              loading="lazy"
+            /> <!-- imagen de muestra de obra artistica-->
+          </div>
+        </article>
+
+        <article class="container-artista">
+          <div class="encabezado-artista">
+            <img 
+              src="static/img/imgArtista/antonioLopez1.webp"
+              alt="Antonio López"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
+            <div>
+              <p>Antonio López</p> <!-- nombre del artista destacado -->
+              <p>Pintor Hiperrealismo</p> <!-- descripcion artista -->
+            </div>
+          </div>
+          <div>
+            <img 
+              src="static/img/imgPinturaArtisDestacado/AntonioLopez.webp"
+              alt="Pintura Antonio López"
+              title="Pintura de Antonio López, Pintor Hiperrealismo"
+              class="pintura-expo"
+              loading="lazy"
+            /> <!-- imagen de muestra de obra artistica-->
+          </div>
+        </article>
+
+        <article class="container-artista">
+          <div class="encabezado-artista">
+            <img 
+              src="static/img/imgArtista/paulSignac.webp"
+              alt="Paul Signac"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
+            <div>
+              <p>Paul Signac</p> <!-- nombre del artista destacado -->
+              <p>Pintor Neoimpresionista</p> <!-- descripcion artista -->
+            </div>
+          </div>
+          <div>
+            <img
+              src="static/img/imgPinturaArtisDestacado/pailSignac.webp"
+              alt="Pintura Paul Signac"
+              title="Pintura de Paul Signac, Pintor Neoimpresionista"
+              class="pintura-expo"
+              loading="lazy" 
+            /> <!-- imagen de muestra de obra artistica-->
+          </div>
+        </article>
+      </section>
+
+    </section>
+
+    <!-- Sección 4 -->
+    <section id="s4">
+
+      <!-- Información de la Galería -->
+      <article id="s4-info">
+        <header class="section-header">
+          <h2>Descubre dónde estamos</h2>
+        </header>
+
+        <!-- Ubicación -->
+        <div id="s4-info-location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420425.4901367846!2d-58.96311932656247!3d-34.58964059999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabadf0a6829%3A0xb1d3b10b9e86cf9f!2sGaler%C3%ADa%20Rubbers!5e0!3m2!1ses-419!2sar!4v1713195007889!5m2!1ses-419!2sar"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Galería Codo a Codo en Google Maps">
+          </iframe>
+        </div>
+
+        <!-- Horarios -->
+        <div id="s4-info-hours">
+          <dl>
+            <dt>LUNES</dt>
+            <dd>CERRADO</dd>
+
+            <dt>MARTES</dt>
+            <dd>10:30 AM - 5:00 PM</dd>
+
+            <dt>MIÉRCOLES</dt>
+            <dd>10:30 AM - 9:00 PM</dd>
+
+            <dt>JUEVES</dt>
+            <dd>10:30 AM - 5:00 PM</dd>
+
+            <dt>VIERNES</dt>
+            <dd>10:30 AM - 9:00 PM</dd>
+
+            <dt>SÁBADO</dt>
+            <dd>10:30 AM - 5:30 PM</dd>
+
+            <dt>DOMINGO</dt>
+            <dd>10:30 AM - 5:30 PM</dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- Formulario de Contacto -->
+      <article id="s4-form">
+        <header class="section-header">
+          <h2>Contacto</h2>
+        </header>
+
+        <form id="contactForm">
+
+          <!-- email -->
+          <div class="form-group">
+            <label for="correo">Email</label>
+            <input type="email" name="correo" id="correo" class="form-control" required />
+
+            <div id="invalid-feedback-email" class="invalid-feedback"></div>
+          </div>
+
+          <!-- imagen -->
+          <div class="form-group">
+            <label for="obraArte">Obra de Arte</label>
+            <input type="file" name="obraArte" id="obraArte" accept="image/*" required />
+
+            <div id="invalid-feedback-file" class="invalid-feedback"></div>
+          </div>
+
+          <!-- select -->
+          <div class="form-group">
+            <label for="tipoObra" class="form-label">Tipo de Obra</label>
+            <select name="tipoObra" id="tipoObra" class="form-control" required>
+              <option value="" disabled selected hidden>Selecciona el tipo de obra</option>
+              <option value="Dibujo">Dibujo</option>
+              <option value="Pintura">Pintura</option>
+              <option value="Grabado">Grabado</option>
+              <option value="Escultura">Escultura</option>
+              <option value="Fotografía">Fotografía</option>
+            </select>
+
+            <div id="invalid-feedback-select" class="invalid-feedback"></div>
+          </div>
+
+          <!-- radiobutton -->
+          <div class="form-group">
+            <div>
+              <label>Estilo/Técnica</label>
+            </div>
+
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="realismo" class="form-check-input" />
+              <label for="realismo" class="form-check-label">Realismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="abstracto" class="form-check-input" />
+              <label for="abstracto" class="form-check-label">Abstracto</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="surrealismo" class="form-check-input" />
+              <label for="surrealismo" class="form-check-label">Surrealismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="impresionismo" class="form-check-input" />
+              <label for="impresionismo" class="form-check-label">Impresionismo</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="estiloTecnica" id="expresionismo" class="form-check-input" />
+              <label for="expresionismo" class="form-check-label">Expresionismo</label>
+            </div>
+
+            <div id="invalid-feedback-radio" class="invalid-feedback"></div>
+          </div>
+
+          <!-- checkbox -->
+          <div class="form-group">
+            <div class="form-check-inline">
+              <input type="checkbox" name="aceptoReglamento" id="aceptoReglamento" class="form-check-input" />
+              <label for="aceptoReglamento" class="form-check-label">Acepto el Reglamento</label>
+            </div>
+            <div id="invalid-feedback-check" class="invalid-feedback"></div>
+          </div>
+
+          <div>
+            <button type="submit" id="submitInput">Enviar</button>
+          </div>
+        </form>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <section class="pie-de-pag"> <!-- informacion de la galeria -->
+      <article class="social"> <!-- redes sociales -->
+        <div class="social-link">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://ar.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </article>
+      <article class="derechos"> <!-- derechos -->
+        <p>&copy; 2024 Galería Codo a Codo</p>
+      </article>
+    </section>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="static/js/index.js"></script>
+</body>
+
+</html>
