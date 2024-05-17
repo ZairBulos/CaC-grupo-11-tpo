@@ -4,34 +4,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Galería Virtual de Arte es una plataforma online diseñada para brindar a los usuarios una experiencia inmersiva en el mundo del arte." />
+  <meta name="keywords" content="Arte, Galería, Exposición, Pinturas, Codo a Codo, Desarrollo Web, Front-end, HTML, CSS, JavaScript" />
   <link rel="stylesheet" href="static/css/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>CaC TPO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon-16.ico" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon-32.ico" sizes="32x32" />
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon-96.ico" sizes="96x96" />
+  <title>Galería Codo a Codo</title>
 </head>
 
 <body>
 
   <!-- Encabezado -->
   <header class="main-header">
-    <div class="logo-container">
-      <img src="/static/img/logo.png" alt="cactpo.com" />
-      <span>Nombre galería</span>
+    <div class="container">
+      <div class="logo-container">
+        <img src="/static/img/logo.png" alt="galeriacodoacodo.com" />
+        <span>Galería Codo a Codo</span>
+      </div>
+  
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#s1">Conocenos</a></li>
+          <li><a href="#s2">Cuadros</a></li>
+          <li><a href="#s3">Artistas</a></li>
+          <li><a href="#s4">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav class="nav-links">
-      <ul>
-        <li><a href="#s1">Conocenos</a></li>
-        <li><a href="#s2">Cuadros</a></li>
-        <li><a href="#s3">Artistas</a></li>
-        <li><a href="#s4">Contacto</a></li>
-      </ul>
-    </nav>
   </header>
 
   <!-- Contenido -->
-  <main>
+  <main class="container">
 
     <!-- Sección 1 -->
     <section id="s1">
@@ -39,7 +51,7 @@
 
       <article>
         <header>
-          <h1>Nombre galería</h1>
+          <h1>Galería Codo a Codo</h1>
         </header>
 
         <p>
@@ -99,8 +111,11 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="static/img/gallery/gallery-picture-6.webp" alt="Landscape with Saint John on Patmos de Nicolas Poussin"
-            title="Nicolas Poussin, Landscape with Saint John on Patmos" />
+          <img 
+            src="static/img/gallery/gallery-picture-6.webp"
+            alt="Landscape with Saint John on Patmos de Nicolas Poussin"
+            title="Nicolas Poussin, Landscape with Saint John on Patmos"
+          />
           <figcaption>
             <span>Nicolas Poussin</span> <!-- Nombre del artista -->
             <h3>Landscape with Saint John on Patmos</h3> <!-- Nombre del cuadro -->
@@ -135,121 +150,97 @@
       <section class="container-artistas-destacados">
         <article class="container-artista">
           <div class="encabezado-artista">
-            <figcaption>
-              <img 
-                src="static/img/imgArtista/migelangel.webp" 
-                alt="Miguel Ángel"
-                class="foto-artista" 
-                loading="lazy" 
-              /> <!--  foto de artista -->
-            </figcaption>
+            <img 
+              src="static/img/imgArtista/migelangel.webp"
+              alt="Miguel Ángel"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
             <div>
               <p>Miguel Ángel</p> <!-- nombre del artista destacado -->
-              <div>
-                <p>Arquitecto y Escultor</p> <!-- descripcion artista -->
-              </div>
+              <p>Arquitecto y Escultor</p> <!-- descripcion artista -->
             </div>
           </div>
           <div>
-            <figcaption>
-              <img 
-                src="static/img/imgPinturaArtisDestacado/migelAngel1.webp" 
-                alt="Pintura Miguel Ángel"
-                title="Pintura de Miguel Ángel, Arquitecto y Escultor" 
-                class="pintura-expo" 
-                loading="lazy" 
-              /> <!-- imagen de muestra de obra artistica-->
-            </figcaption>
+            <img 
+              src="static/img/imgPinturaArtisDestacado/migelAngel1.webp"
+              alt="Pintura Miguel Ángel"
+              title="Pintura de Miguel Ángel, Arquitecto y Escultor"
+              class="pintura-expo"
+              loading="lazy"
+            /> <!-- imagen de muestra de obra artistica-->
           </div>
         </article>
 
         <article class="container-artista">
           <div class="encabezado-artista">
-            <figcaption>
-              <img 
-                src="static/img/imgArtista/edvardMunch.webp"
-                alt="Edvard Munch"
-                class="foto-artista"
-                loading="lazy" 
-              /> <!--  foto de artista -->
-            </figcaption>
+            <img 
+              src="static/img/imgArtista/edvardMunch.webp"
+              alt="Edvard Munch"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
             <div>
               <p>Edvard Munch</p> <!-- nombre del artista destacado -->
-              <div>
-                <p>Pintor Expresionismo</p> <!-- descripcion artista -->
-              </div>
+              <p>Pintor Expresionismo</p> <!-- descripcion artista -->
             </div>
           </div>
           <div>
-            <figcaption>
-              <img 
-                src="static/img/imgPinturaArtisDestacado/EdvarMuch.webp"
-                alt="Pintura Edvard Munch"
-                title="Pintura de Edvard Munch, Pintor Expresionismo"
-                class="pintura-expo"
-                loading="lazy"
-              /> <!-- imagen de muestra de obra artistica-->
-            </figcaption>
+            <img 
+              src="static/img/imgPinturaArtisDestacado/EdvarMuch.webp"
+              alt="Pintura Edvard Munch"
+              title="Pintura de Edvard Munch, Pintor Expresionismo"
+              class="pintura-expo"
+              loading="lazy"
+            /> <!-- imagen de muestra de obra artistica-->
           </div>
         </article>
 
         <article class="container-artista">
           <div class="encabezado-artista">
-            <figcaption>
-              <img 
-                src="static/img/imgArtista/antonioLopez1.webp"
-                alt="Antonio López"
-                class="foto-artista"
-                loading="lazy"
-              /> <!--  foto de artista -->
-            </figcaption>
+            <img 
+              src="static/img/imgArtista/antonioLopez1.webp"
+              alt="Antonio López"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
             <div>
               <p>Antonio López</p> <!-- nombre del artista destacado -->
-              <div>
-                <p>Pintor Hiperrealismo</p> <!-- descripcion artista -->
-              </div>
+              <p>Pintor Hiperrealismo</p> <!-- descripcion artista -->
             </div>
           </div>
           <div>
-            <figcaption>
-              <img 
-                src="static/img/imgPinturaArtisDestacado/AntonioLopez.webp"
-                alt="Pintura Antonio López"
-                title="Pintura de Antonio López, Pintor Hiperrealismo"
-                class="pintura-expo"
-                loading="lazy"
-              /> <!-- imagen de muestra de obra artistica-->
-            </figcaption>
+            <img 
+              src="static/img/imgPinturaArtisDestacado/AntonioLopez.webp"
+              alt="Pintura Antonio López"
+              title="Pintura de Antonio López, Pintor Hiperrealismo"
+              class="pintura-expo"
+              loading="lazy"
+            /> <!-- imagen de muestra de obra artistica-->
           </div>
         </article>
 
         <article class="container-artista">
           <div class="encabezado-artista">
-            <figcaption>
-              <img 
-                src="static/img/imgArtista/paulSignac.webp" 
-                alt="Paul Signac" 
-                class="foto-artista"
-                loading="lazy"
-              /> <!--  foto de artista -->
-            </figcaption>
+            <img 
+              src="static/img/imgArtista/paulSignac.webp"
+              alt="Paul Signac"
+              class="foto-artista"
+              loading="lazy"
+            /> <!--  foto de artista -->
             <div>
               <p>Paul Signac</p> <!-- nombre del artista destacado -->
-              <div>
-                <p>Pintor Neoimpresionista</p> <!-- descripcion artista -->
-              </div>
+              <p>Pintor Neoimpresionista</p> <!-- descripcion artista -->
             </div>
           </div>
           <div>
-            <figcaption>
-              <img 
-                src="static/img/imgPinturaArtisDestacado/pailSignac.webp"
-                alt="Pintura Paul Signac"
-                title="Pintura de Paul Signac, Pintor Neoimpresionista"
-                class="pintura-expo"
-                loading="lazy"
-              /> <!-- imagen de muestra de obra artistica-->
-            </figcaption>
+            <img
+              src="static/img/imgPinturaArtisDestacado/pailSignac.webp"
+              alt="Pintura Paul Signac"
+              title="Pintura de Paul Signac, Pintor Neoimpresionista"
+              class="pintura-expo"
+              loading="lazy" 
+            /> <!-- imagen de muestra de obra artistica-->
           </div>
         </article>
       </section>
@@ -270,7 +261,7 @@
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420425.4901367846!2d-58.96311932656247!3d-34.58964059999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabadf0a6829%3A0xb1d3b10b9e86cf9f!2sGaler%C3%ADa%20Rubbers!5e0!3m2!1ses-419!2sar!4v1713195007889!5m2!1ses-419!2sar"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Ubicación de <Nombre de la galería> en Google Maps">
+            title="Ubicación de Galería Codo a Codo en Google Maps">
           </iframe>
         </div>
 
@@ -329,7 +320,7 @@
           <div class="form-group">
             <label for="tipoObra" class="form-label">Tipo de Obra</label>
             <select name="tipoObra" id="tipoObra" class="form-control" required>
-              <option value="" selected disabled></option>
+              <option value="" disabled selected hidden>Selecciona el tipo de obra</option>
               <option value="Dibujo">Dibujo</option>
               <option value="Pintura">Pintura</option>
               <option value="Grabado">Grabado</option>
@@ -400,7 +391,7 @@
         </div>
       </article>
       <article class="derechos"> <!-- derechos -->
-        <p>&copy 2024 Nombre de la galería</p>
+        <p>&copy; 2024 Galería Codo a Codo</p>
       </article>
     </section>
   </footer>
